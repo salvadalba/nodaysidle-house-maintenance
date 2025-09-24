@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDI - House Maintenance Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="search-header">
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" placeholder="Search maintenance issues..." id="searchInput">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="material-icons">dark_mode</span>
+                </button>
+            </div>
+            <div class="filter-chips">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="kitchen">Kitchen</button>
+                <button class="chip" data-filter="bathroom">Bathroom</button>
+                <button class="chip" data-filter="bedroom">Bedroom</button>
+                <button class="chip" data-filter="living-room">Living room</button>
+                <button class="chip" data-filter="outdoor">Outdoor</button>
+                <button class="chip" data-filter="emergency">Emergency</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1>Fix It Yourself</h1>
+            <p>Quick solutions for common house problems</p>
+        </section>
+
+        <section class="seasonal-tasks">
+            <h2>Seasonal Tasks</h2>
+            <div class="horizontal-scroll">
+                <div class="task-card winter">
+                    <span class="material-icons">ac_unit</span>
+                    <h3>Winter Prep</h3>
+                    <p>Heating & insulation</p>
+                </div>
+                <div class="task-card spring">
+                    <span class="material-icons">local_florist</span>
+                    <h3>Spring Clean</h3>
+                    <p>Deep cleaning & repairs</p>
+                </div>
+                <div class="task-card summer">
+                    <span class="material-icons">wb_sunny</span>
+                    <h3>Summer Care</h3>
+                    <p>Cooling & outdoor</p>
+                </div>
+                <div class="task-card autumn">
+                    <span class="material-icons">eco</span>
+                    <h3>Autumn Prep</h3>
+                    <p>Weatherproofing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="room-grid">
+            <h2>Browse by Room</h2>
+            <div class="grid cards">
+                <div class="room-card" data-room="kitchen">
+                    <span class="material-icons">kitchen</span>
+                    <h3>Kitchen</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+                <div class="room-card" data-room="bathroom">
+                    <span class="material-icons">bathtub</span>
+                    <h3>Bathroom</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+                <div class="room-card" data-room="bedroom">
+                    <span class="material-icons">bed</span>
+                    <h3>Bedroom</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+                <div class="room-card" data-room="living-room">
+                    <span class="material-icons">weekend</span>
+                    <h3>Living Room</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+                <div class="room-card" data-room="office">
+                    <span class="material-icons">computer</span>
+                    <h3>Home Office</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+                <div class="room-card" data-room="outdoor">
+                    <span class="material-icons">yard</span>
+                    <h3>Outdoor</h3>
+                    <p>10 common issues</p>
+                    <span class="card-arrow material-icons">arrow_forward</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-issues">
+            <h2>Recent Issues</h2>
+            <div class="issue-list">
+                <div class="issue-item">
+                    <span class="material-icons issue-icon">plumbing</span>
+                    <div class="issue-content">
+                        <h4>Blocked Kitchen Drain</h4>
+                        <p>DIY solution available</p>
+                    </div>
+                    <span class="material-icons">chevron_right</span>
+                </div>
+                <div class="issue-item">
+                    <span class="material-icons issue-icon">electrical_services</span>
+                    <div class="issue-content">
+                        <h4>Flickering Lights</h4>
+                        <p>Professional required</p>
+                    </div>
+                    <span class="material-icons">chevron_right</span>
+                </div>
+                <div class="issue-item">
+                    <span class="material-icons issue-icon">thermostat</span>
+                    <div class="issue-content">
+                        <h4>Heating Problems</h4>
+                        <p>Mixed solutions</p>
+                    </div>
+                    <span class="material-icons">chevron_right</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-page="home">
+            <span class="material-icons">home</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" data-page="search">
+            <span class="material-icons">search</span>
+            <span class="nav-label">Search</span>
+        </button>
+        <button class="nav-item" data-page="favorites">
+            <span class="material-icons">favorite</span>
+            <span class="nav-label">Saved</span>
+        </button>
+        <button class="nav-item" data-page="emergency">
+            <span class="material-icons">warning</span>
+            <span class="nav-label">Emergency</span>
+        </button>
+    </nav>
+
+    <!-- Module Integration System - loads and coordinates all modules -->
+    <script src="js/module-integration.js"></script>
+    
+    <!-- Main application script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
